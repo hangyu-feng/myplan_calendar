@@ -321,7 +321,7 @@
         // Define time range
         const startHour = 7; // 7 AM
         const endHour = 22; // 10 PM
-        const hourHeight = 60; // px
+        const hourHeight = 80; // px
 
         // Time Column
         const timeCol = document.createElement('div');
@@ -462,7 +462,11 @@
                     const endM = ev.end % 60;
                     const timeText = `${startH > 12 ? startH-12 : startH}:${startM.toString().padStart(2,'0')} - ${endH > 12 ? endH-12 : endH}:${endM.toString().padStart(2,'0')}`;
 
-                    eventEl.innerHTML = `<strong>${ev.code}</strong><br>${ev.courseName}<br><span style="font-size:0.8em">${timeText}</span>`;
+                    eventEl.innerHTML = `
+                        <div style="font-weight:bold; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${ev.code}</div>
+                        <div style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-size:0.95em; opacity:0.9;">${ev.courseName}</div>
+                        <div style="font-size:0.85em; opacity:0.85; margin-top:1px;">${timeText}</div>
+                    `;
 
                     Object.assign(eventEl.style, {
                         position: 'absolute',
@@ -473,15 +477,19 @@
                         backgroundColor: ev.bg,
                         color: ev.text,
                         borderRadius: '4px',
-                        padding: '4px',
+                        padding: '2px 4px',
                         fontSize: '11px',
+                        lineHeight: '1.2',
                         overflow: 'hidden',
                         opacity: '0.95',
                         zIndex: '5',
                         border: '1px solid white',
                         boxSizing: 'border-box',
                         cursor: 'pointer',
-                        transition: 'transform 0.1s ease'
+                        transition: 'transform 0.1s ease',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: height < 40 ? 'center' : 'start'
                     });
 
                     eventEl.onmouseenter = () => {
