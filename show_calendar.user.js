@@ -6,7 +6,7 @@
 // @author       Hangyu Feng
 // @match        https://myplan.uw.edu/*
 // @grant        none
-// @license      GPL-3.0
+// @license      GPL-3.0-or-later
 // @homepageURL  https://github.com/hangyu-feng/myplan_calendar
 // @supportURL   https://github.com/hangyu-feng/myplan_calendar/issues
 // @updateURL    https://github.com/hangyu-feng/myplan_calendar/raw/main/show_calendar.user.js
