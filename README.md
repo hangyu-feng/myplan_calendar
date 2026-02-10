@@ -14,15 +14,27 @@ This userscript parses your planned courses and displays them in a clean, weekly
 
 ### 1. Install a Userscript Manager
 You need a browser extension to run this script:
-- [Tampermonkey](https://www.tampermonkey.net/) (Recommended)
-- [Greasemonkey](https://www.greasemonkey.net/)
-- [Violentmonkey](https://violentmonkey.github.io/)
+- **Chrome/Firefox/Edge**: [Tampermonkey](https://www.tampermonkey.net/) (Recommended) or [Violentmonkey](https://violentmonkey.github.io/)
+- **Safari**: [Userscripts](https://itunes.apple.com/us/app/userscripts/id1463298887) (Free and Open Source)
+- **Firefox (Android)**: [Tampermonkey](https://www.tampermonkey.net/) or [Greasemonkey](https://www.greasemonkey.net/)
 
 ### 2. Install MyPlan Calendar
 Click the link below to install the script from your preferred platform:
-- **[Install via Greasy Fork](https://greasyfork.org/scripts/XXXXXX-myplan-calendar)** (Coming Soon)
-- **[Install via OpenUserJS](https://openuserjs.org/scripts/hangyu-feng/MyPlan_Calendar)** (Coming Soon)
+- **[Install via Greasy Fork](https://greasyfork.org/scripts/526744-myplan-calendar)**
+- **[Install via OpenUserJS](https://openuserjs.org/scripts/hangyu-feng/MyPlan_Calendar)**
 - **[Direct Install (GitHub)](https://github.com/hangyu-feng/myplan_calendar/raw/main/show_calendar.user.js)**
+
+## Platform Synchronization (For Developers)
+
+To ensure the script updates automatically across platforms when changes are pushed to this repository:
+
+### Greasy Fork
+1. **Initial Setup**: Use the "Sync from URL" feature and provide the raw GitHub URL.
+2. **Webhook**: Go to your Greasy Fork control panel, copy the Webhook Payload URL, and add it to this GitHub repository under **Settings > Webhooks**. Set content type to `application/json`.
+
+### OpenUserJS
+1. **Initial Setup**: Use the "Add a Script" button and select "GitHub" as the source.
+2. **Authorization**: Authorize OpenUserJS to access this repository; it will automatically create the necessary webhooks for instant updates.
 
 ## Usage
 1. Log in to [UW MyPlan](https://myplan.uw.edu/plan/).
