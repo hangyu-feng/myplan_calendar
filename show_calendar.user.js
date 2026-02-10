@@ -4,7 +4,7 @@
 // @version      1.0
 // @description  Add a calendar view to MyPlan
 // @author       Hangyu Feng
-// @match        https://myplan.uw.edu/*
+// @match        https://myplan.uw.edu/plan/*
 // @grant        none
 // @license      GPL-3.0-or-later
 // @homepageURL  https://github.com/hangyu-feng/myplan_calendar
@@ -573,7 +573,15 @@
     }
 
     function addTriggerButton() {
-        if (document.getElementById(BUTTON_ID)) return;
+        const isPlanPage = /^#\/[a-z]{2}\d{2}$/i.test(window.location.hash);
+        const existingBtn = document.getElementById(BUTTON_ID);
+
+        if (!isPlanPage) {
+            if (existingBtn) existingBtn.remove();
+            return;
+        }
+
+        if (existingBtn) return;
 
         const btn = document.createElement('button');
         btn.id = BUTTON_ID;
@@ -606,6 +614,7 @@
     }
 
     window.addEventListener('load', addTriggerButton);
+    window.addEventListener('hashchange', addTriggerButton);
     setInterval(addTriggerButton, 2000);
 
 })();
