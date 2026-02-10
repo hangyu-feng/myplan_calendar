@@ -1,0 +1,35 @@
+# MyPlan Calendar
+
+Enhance the University of Washington's **MyPlan** tool with a functional and visually integrated **Calendar View**.
+
+This userscript parses your planned courses and displays them in a clean, weekly grid, making it easier to visualize your schedule for future quarters.
+
+## Features
+- **Weekly Grid View**: Visual representation of your planned courses.
+- **UW Branding**: Styled with official UW Purple (`#39275B`) and Gold (`#C79900`).
+- **Interactive Popover**: Click any course to see detailed information (SLN, Credits, Location, Instructor, and real-time Availability).
+- **Automatic Updates**: Syncs directly with the latest version from GitHub.
+
+## Installation
+
+### 1. Install a Userscript Manager
+You need a browser extension to run this script:
+- [Tampermonkey](https://www.tampermonkey.net/) (Recommended)
+- [Greasemonkey](https://www.greasemonkey.net/)
+- [Violentmonkey](https://violentmonkey.github.io/)
+
+### 2. Install MyPlan Calendar
+Click the link below to install the script from your preferred platform:
+- **[Install via Greasy Fork](https://greasyfork.org/scripts/XXXXXX-myplan-calendar)** (Coming Soon)
+- **[Install via OpenUserJS](https://openuserjs.org/scripts/hangyu-feng/MyPlan_Calendar)** (Coming Soon)
+- **[Direct Install (GitHub)](https://github.com/hangyu-feng/myplan_calendar/raw/main/show_calendar.user.js)**
+
+## Usage
+1. Log in to [UW MyPlan](https://myplan.uw.edu/plan/).
+2. Navigate to a plan page (e.g., `https://myplan.uw.edu/plan/#/sp26`).
+3. Click the **"Show Calendar"** button that appears on the page.
+4. Click on any course block in the calendar to view full details.
+5. Click anywhere on the background to close the calendar view.
+
+## License
+Distributed under the [GPL-3.0 License](LICENSE).

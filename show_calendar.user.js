@@ -6,6 +6,11 @@
 // @author       Hangyu Feng
 // @match        https://myplan.uw.edu/*
 // @grant        none
+// @license      GPL-3.0
+// @homepageURL  https://github.com/hangyu-feng/myplan_calendar
+// @supportURL   https://github.com/hangyu-feng/myplan_calendar/issues
+// @updateURL    https://github.com/hangyu-feng/myplan_calendar/raw/main/show_calendar.user.js
+// @downloadURL  https://github.com/hangyu-feng/myplan_calendar/raw/main/show_calendar.user.js
 // ==/UserScript==
 
 (function() {
