@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         MyPlan Calendar
 // @namespace    http://tampermonkey.net/
-// @version      1.2
+// @version      1.3
 // @description  Add a calendar view to MyPlan
 // @author       Hangyu Feng
 // @match        https://myplan.uw.edu/plan/*
