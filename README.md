@@ -18,10 +18,11 @@ You need a browser extension to run this script:
 - **Firefox (Android)**: [Tampermonkey](https://www.tampermonkey.net/) or [Greasemonkey](https://www.greasemonkey.net/)
 
 ### 2. Install MyPlan Calendar
-Click the link below to install the script from your preferred platform:
-- **[Install via Greasy Fork](https://greasyfork.org/scripts/526744-myplan-calendar)**
-- **[Install via OpenUserJS](https://openuserjs.org/scripts/hangyu-feng/MyPlan_Calendar)**
-- **[Direct Install (GitHub)](https://github.com/hangyu-feng/myplan_calendar/raw/main/show_calendar.user.js)**
+Choose your preferred platform:
+
+[![Greasy Fork](https://img.shields.io/badge/Greasy%20Fork-Install-red?style=for-the-badge&logo=greasy-fork)](https://greasyfork.org/scripts/526744-myplan-calendar)
+[![OpenUserJS](https://img.shields.io/badge/OpenUserJS-Install-blue?style=for-the-badge)](https://openuserjs.org/scripts/hangyu-feng/MyPlan_Calendar)
+[![GitHub](https://img.shields.io/badge/GitHub-Direct%20Install-black?style=for-the-badge&logo=github)](https://github.com/hangyu-feng/myplan_calendar/raw/main/show_calendar.user.js)
 
 ## Platform Synchronization (For Developers)
 
