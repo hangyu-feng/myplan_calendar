@@ -9,6 +9,7 @@ This userscript parses your planned courses and displays them in a clean, weekly
 ## Features
 - **Weekly Grid View**: Visual representation of your planned courses.
 - **Interactive Popover**: Click any course to see detailed information (SLN, Credits, Location, Instructor, and real-time Availability).
+- **Quick Navigation**: Course titles in the popover are clickable links that take you directly back to the MyPlan course page.
 - **Automatic Updates**: Syncs directly with the latest version from GitHub.
 
 ## Installation

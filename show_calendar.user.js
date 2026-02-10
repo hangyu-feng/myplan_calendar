@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         MyPlan Calendar
 // @namespace    http://tampermonkey.net/
-// @version      1.3
+// @version      1.4
 // @description  Add a calendar view to MyPlan
 // @author       Hangyu Feng
 // @match        https://myplan.uw.edu/plan/*
@@ -54,10 +54,12 @@
             let code = "Unknown";
             let courseName = "";
             let deptName = "";
+            let coursePageLink = "";
             
             const codeLink = item.querySelector('h3 a');
             if (codeLink) {
                 code = codeLink.textContent.trim();
+                coursePageLink = codeLink.href;
                 const ariaLabel = (codeLink.getAttribute('aria-label') || "").trim().replace(/\s+/g, ' ');
                 
                 const match = ariaLabel.match(/^(.*?)\s+(\d{3})\s+(.*)$/);
@@ -154,6 +156,7 @@
                     const colors = getCourseColor(code);
                     courses.push({
                         code, deptName, courseName, title, section, instructor, location, sln, restrictionsLink,
+                        coursePageLink,
                         learningFormat, availability, credits,
                         days, start: startMin, end: endMin, bg: colors.bg, text: colors.text
                     });
@@ -514,8 +517,13 @@
                     eventEl.onclick = (e) => {
                         e.stopPropagation();
                         
-                        let content = `<div style="color:#C79900; font-weight:800; font-size:1.25em; margin-bottom:2px;">${ev.code}</div>`;
-                        content += `<div style="font-weight:700; font-size:1.1em; margin-bottom:4px; line-height:1.2;">${ev.courseName}</div>`;
+                        let content = `<div style="margin-bottom:4px;">`;
+                        content += `<div style="color:#C79900; font-weight:800; font-size:1.25em; margin-bottom:2px; line-height:1.2;">${ev.code}</div>`;
+                        content += `<a href="${ev.coursePageLink}" target="_blank" 
+                                       onmouseover="this.style.textDecoration='underline';this.style.color='#8E632A';" 
+                                       onmouseout="this.style.textDecoration='none';this.style.color='#C79900';"
+                                       style="color:#C79900; text-decoration:none; font-weight:700; font-size:1.1em; line-height:1.2; display:inline-block; transition: color 0.2s ease;">${ev.courseName}</a>`;
+                        content += `</div>`;
                         
                         if (ev.deptName) {
                             content += `<div style="font-size:0.85em; opacity:0.8; margin-bottom:12px; font-style:italic; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:8px;">${ev.deptName}</div>`;
