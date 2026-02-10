@@ -4,6 +4,8 @@ Enhance the University of Washington's **MyPlan** tool with a functional and vis
 
 This userscript parses your planned courses and displays them in a clean, weekly grid, making it easier to visualize your schedule for future quarters.
 
+![MyPlan Calendar Demo](demo.gif)
+
 ## Features
 - **Weekly Grid View**: Visual representation of your planned courses.
 - **Interactive Popover**: Click any course to see detailed information (SLN, Credits, Location, Instructor, and real-time Availability).
