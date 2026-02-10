@@ -26,18 +26,6 @@ Choose your preferred platform:
 [![OpenUserJS](https://img.shields.io/badge/OpenUserJS-Install-blue?style=for-the-badge)](https://openuserjs.org/scripts/Diu/MyPlan_Calendar)
 [![GitHub](https://img.shields.io/badge/GitHub-Direct%20Install-black?style=for-the-badge&logo=github)](https://github.com/hangyu-feng/myplan_calendar/raw/main/show_calendar.user.js)
 
-## Platform Synchronization (For Developers)
-
-To ensure the script updates automatically across platforms when changes are pushed to this repository:
-
-### Greasy Fork
-1. **Initial Setup**: Use the "Sync from URL" feature and provide the raw GitHub URL.
-2. **Webhook**: Go to your Greasy Fork control panel, copy the Webhook Payload URL, and add it to this GitHub repository under **Settings > Webhooks**. Set content type to `application/json`.
-
-### OpenUserJS
-1. **Initial Setup**: Use the "Add a Script" button and select "GitHub" as the source.
-2. **Authorization**: Authorize OpenUserJS to access this repository; it will automatically create the necessary webhooks for instant updates.
-
 ## Usage
 1. Log in to [UW MyPlan](https://myplan.uw.edu/plan/).
 2. Navigate to a plan page (e.g., `https://myplan.uw.edu/plan/#/sp26`).
