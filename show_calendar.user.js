@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         MyPlan Calendar
 // @namespace    http://tampermonkey.net/
-// @version      1.1
+// @version      1.2
 // @description  Add a calendar view to MyPlan
 // @author       Hangyu Feng
 // @match        https://myplan.uw.edu/plan/*
@@ -573,7 +573,7 @@
     }
 
     function addTriggerButton() {
-        const isPlanPage = /^#\/[a-z]{2}\d{2}$/i.test(window.location.hash);
+        const isPlanPage = /^#\/[a-z]{2}\d{2}/i.test(window.location.hash);
         const existingBtn = document.getElementById(BUTTON_ID);
 
         if (!isPlanPage) {
