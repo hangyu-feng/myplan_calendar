@@ -6,7 +6,6 @@ This userscript parses your planned courses and displays them in a clean, weekly
 
 ## Features
 - **Weekly Grid View**: Visual representation of your planned courses.
-- **UW Branding**: Styled with official UW Purple (`#39275B`) and Gold (`#C79900`).
 - **Interactive Popover**: Click any course to see detailed information (SLN, Credits, Location, Instructor, and real-time Availability).
 - **Automatic Updates**: Syncs directly with the latest version from GitHub.
 
