@@ -245,9 +245,21 @@
         });
         document.body.appendChild(popover);
 
-        // Close popover when clicking anywhere else in the modal
-        modal.addEventListener('click', () => {
-            popover.style.display = 'none';
+        const closeCalendar = (e) => {
+            if (e && e.type === 'keydown' && e.key !== 'Escape') return;
+            modal.remove();
+            popover.remove();
+            window.removeEventListener('keydown', closeCalendar);
+        };
+        window.addEventListener('keydown', closeCalendar);
+
+        // Close entire calendar if clicking the backdrop (the modal div itself)
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeCalendar();
+            } else {
+                popover.style.display = 'none';
+            }
         });
 
         // Prevent clicks inside the popover from closing itself
@@ -272,10 +284,8 @@
 
         const closeBtn = document.createElement('button');
         closeBtn.innerHTML = '&times; Close';
-        closeBtn.onclick = () => {
-            modal.remove();
-            popover.remove();
-        };
+        closeBtn.onclick = closeCalendar;
+
         Object.assign(closeBtn.style, {
             padding: '8px 16px',
             cursor: 'pointer',
