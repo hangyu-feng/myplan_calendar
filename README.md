@@ -23,7 +23,6 @@ You need a browser extension to run this script:
 Choose your preferred platform:
 
 [![Greasy Fork](https://img.shields.io/badge/Greasy%20Fork-Install-red?style=for-the-badge&logo=greasy-fork)](https://greasyfork.org/en/scripts/565779-myplan-calendar)
-[![OpenUserJS](https://img.shields.io/badge/OpenUserJS-Install-blue?style=for-the-badge)](https://openuserjs.org/scripts/Diu/MyPlan_Calendar)
 [![GitHub](https://img.shields.io/badge/GitHub-Direct%20Install-black?style=for-the-badge&logo=github)](https://github.com/hangyu-feng/myplan_calendar/raw/main/show_calendar.user.js)
 
 ## Usage
